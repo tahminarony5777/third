@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*#myDiv*/
+        /*{*/
+        /*    width: 100%;*/
+        /*    height: 100px;*/
+        /*    background-color: orange;*/
+        /*    position: relative;*/
+        /*    font-size: 18px;*/
+        /*    padding: 16px;*/
+        /*}*/
+        /*@keyframes myAnimation {*/
+        /*    from{*/
+        /*        top: 0px*/
+        /*    }*/
+        /*    to{*/
+        /*        top: 300px*/
+        /*    }*/
+        /*}*/
+        /*.div1{*/
+        /*    height: 100px;*/
+        /*    width: 100px;*/
+        /*    background-color: red;*/
+        /*}*/
+    </style>
+</head>
+<body onhashchange="myFunction()">
+<!--<input type="text"  id="myInput" onblur="blurFunction()" onfocus="focusFunction()">-->
+<!--<input type="text" id="fname" id="myInput">-->
+<!--Enter Your Name: <input type="text" id="fname" onblur="myFunction()">-->
+<!--Enter Your Name: <input type="text" id="fname" onblur="myFunction()">-->
+<!--<div id="myDiv" onclick="myFunction()">-->
+<!--    The animation has completed-->
+<!--</div>-->
+<!--<element onabort = 'myScript'>Hi</element>-->
+<!--<div class="div1" id="div1">-->
+
+<!--</div>-->
+<!--<button id="btn">Click Me</button>-->
+<!--<form action="" id="myForm">-->
+<!--    <input type="text" id="myInput">-->
+<!--</form>-->
+<!--<form action="" id="myForm">-->
+<!--    <input type="text" id="myInput">-->
+<!--&lt;!&ndash;</form>&ndash;&gt;-->
+<!--<select name="" id="mySelect" onchange="myFunction()">-->
+<!--    <option value="Audi">Audi</option>-->
+<!--    <option value="BMW">BMW</option>-->
+<!--    <option value="Marcedes">Marcedes</option>-->
+<!--    <option value="Volvo">Volvo</option>-->
+<!--</select>-->
+<!--<p id="demo"></p>-->
+<!--<div id="myContext" oncontextmenu="myFunction()" style="border: 1px solid black; padding: 10px">-->
+<!--<div id="myContext"  style="border: 1px solid black; padding: 10px">-->
+<!--    <p>Right click in this box to see the hidden content </p>-->
+<!--</div>-->
+<!--<div id="myDiv" style="visibility: hidden">-->
+<!--    <p>This info is hidden</p>-->
+<!--    <p>This info is hidden</p>-->
+<!--    <p>This info is hidden</p>-->
+<!--    <p>This info is hidden</p>-->
+<!--</div>-->
+<!--<input type="text" oncopy="myFunction()" value="Try to copy me">-->
+<!--<p id="demo"></p>-->
+<!--<P  ondblclick="myFunction()">Double Click Function</P>-->
+<!--<P  id="dbclick">Double Click Function</P>-->
+<!--<p id="demo"></p>-->
+<!--<div ondrop = "drop(event)" ondragover="allowDrop(event)">-->
+<!--    <p ondragstart="dragstart(event)" ondrag = "draggin(event)" id="dragtarget" draggable="true" style="border: 1px solid black; width: 100px; padding:10px">Drag Me!</p>-->
+<!--</div>-->
+<!--<p id="demo"></p>-->
+<!--<div style="border: 1px solid black; width: 100px; padding:10px"></div>-->
+<!--<img src="images.gif" alt="" onerror="myFunction()">-->
+<!--<img src="images.gif" alt="" id="myImage">-->
+<!--<img src="images.gif" alt="" id="myImage">-->
+<!--<p id="demo"></p>-->
+<!--Enter your name: <input type="text" onfocus="myFunction(this)">-->
+<!--Enter your name: <input type="text" id="fname">-->
+<!--Enter your name: <input type="text" id="fname" onfocus="myFocus()" onblur="myBlur()">-->
+<!--<input type="text" value="This is value" onfocus="this.value = '' ">-->
+<!--<form action="" id="myForm">-->
+<!--    <input type="text" id="myInput">-->
+<!--</form>-->
+<!--<input type="text" onfocusin="myFocus(this)">-->
+<!--Enter your Name: <input type="text" onfocusin="myFocus()" id="fname">-->
+<!--Enter your Name: <input type="text"  id="fname">-->
+<!--<button onclick="openFullScreen()">Go Full Screen Mode</button>-->
+<!--<button onclick="closeFullScreen()">Close Full Screen </button>-->
+<!--<p id="myP">I will Display</p>-->
+<!--<button onclick="changePart()">Try it</button>-->
+<!--<d id="demo"></d>-->
+<!--<input type="text" id="myInput" oninput="myFunction()">-->
+<!--<p id="demo"></p>-->
+<!--<p>Hello</p>-->
+<!--<p id="demo"></p>-->
+<!--<p id="demo">yikh</p>-->
+<!--<h2 id="demo"></h2>-->
+<!--<button onclick="myStop()">Stop Timer</button>-->
+<!--<button id="btn">Click Me</button>-->
+<!--<div id="res"></div>-->
+<form action="">
+    <table>
+        <tr>
+            <th>First Name:</th>
+            <td> <input type="text" id="first"></td>
+        </tr>
+        <tr>
+            <th>Last Name:</th>
+            <td> <input type="text" id="last"></td>
+        </tr>
+        <tr>
+            <th>Full Name:</th>
+            <td> <input type="text" id="full"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td> <button type="button" id="submitBtn" value="Submit">Submit</button></td>
+        </tr>
+    </table>
+
+</form>
+<script>
+    var submitBtn = document.getElementById('submitBtn')
+    submitBtn.onclick = function() {
+        var first = document.getElementById('first').value;
+        var last = document.getElementById('last').value;
+        var fullName = first + last;
+        document.getElementById('full').value = fullName;
+    }
+    // var div = document.createElement('div')
+    // div.style.height = '200px';
+    // div.style.width = '200px';
+    // div.style.backgroundColor = 'red';
+    // div.innerHTML = 'I am in love'
+    // var h1E = document.createElement('h1');
+    // h1E.innerHTML = 'Hello Div'
+    // h1E.style.textAlign = 'center'
+    // div.append(h1E)
+    // document.getElementById('res').append(div);
+   // var button = document.getElementById('btn')
+   // button.onclick = function () {
+   //      var div = document.createElement('div')
+   //     div.style.height = '200px';
+   //     div.style.width = '200px';
+   //     div.style.backgroundColor = 'red';
+   //     document.getElementById('res').append(div)
+   // }
+    // const name1 = "Tahmina "
+    // const name2 = " Rony"
+    // let x = name1 + name2;
+    // document.getElementById('demo').innerHTML = x;
+    // document.getElementById('demo').style.color = 'red';
+
+    // document.write(name1 + name2)
+    // const x = setInterval(myTimer, 1000)
+    // function myTimer() {
+    //     const date = new Date();
+    //     document.getElementById('demo').innerHTML = date.toLocaleTimeString();
+    // }
+    // function myStop(){
+    //     clearInterval(x)
+    // }
+    // let text = "Hello World";
+    // let x = window.btoa(text);
+    // let y = window.atob(x);
+    // document.getElementById('demo').innerHTML = x +  '<br/>' + y
+   //  const msg = 'Hey I am alert';
+   // alert(msg);
+//     document.addEventListener('click', function () {
+// document.getElementById('demo').style.backgroundColor= 'red';
+//     })
+//     window.addEventListener('click', function () {
+//     document.body.style.backgroundColor = 'green';
+//     })
+    // let p1 = 5;
+    // let p2 = 7;
+    // window.addEventListener('click', function () {
+    //     myFunction(p1, p2)
+    // });
+    // function myFunction() {
+    // let result = p1 * p2;
+    // document.getElementById('demo').innerHTML = result;
+    // }
+// window.addEventListener('click', function(){
+//     document.getElementById('demo').innerHTML = 'I hate this!'
+// });
+// function myFunction() {
+// document.getElementById('demo').innerHTML = 'hi';
+// }
+   // function myFunction() {
+   //     let x =  document.getElementById('myInput').value;
+   //      document.getElementById('demo').innerHTML = "Your  :" + x;
+   // }
+
+    // function changePart() {
+    //     location.hash = 'part5';
+    //     var x = location.hash;
+    //     document.getElementById('demo').innerHTML = "The anchor part" + x;
+    // }
+    // function myFunction() {
+    //     alert('The anchor part has changed')
+    // }
+    // var elem = document.documentElement;
+    // function openFullScreen() {
+    //     if(elem.requestFullscreen){
+    //         elem.requestFullscreen();
+    //     }else if(elem.mozRequestFullScreen) {
+    //         elem.mozRequestFullScreen()
+    //     }else if(elem.webKitRequestFullscreen) {
+    //         elem.webKitRequestFullscreen()
+    //     }else if(elem.msRequestFullscreen){
+    //         elem = window.top.document.body;
+    //         elem.msRequestFullscreen
+    //     }
+    // }
+    // function closeFullScreen() {
+    //     if(document.exitFullscreen){
+    //         document.exitFullscreen();
+    //     }else if(document.mozCancelFullScreen){
+    //         document.mozCancelFullScreen();
+    //     } else if(document.webKitExitFullscreen){
+    //         document.webKitExitFullscreen();
+    //     }else if(document.msExitFullscreen){
+    //         document.msExitFullscreen();
+    //     }
+    // }
+    // document.getElementById('myP').addEventListener('fullscreenchange', myFunction);
+    // function myFunction() {
+    //
+    // }
+    
+    // document.getElementById('fname').addEventListener('focusin', myFocus)
+    // function myFocus() {
+    //     document.getElementById('fname').style.backgroundColor = 'green';
+    // }
+    // document.getElementById('fname').onfocusin = function () {myFocus()}
+    // function myFocus() {
+    //     document.getElementById('fname').style.backgroundColor = 'blue';
+    // }
+    // function myFocus() {
+    //     document.getElementById('fname').style.backgroundColor = 'red';
+    // }
+    // function myFocus(x) {
+    //     x.style.backgroundColor = 'yellow'
+    // }
+    // let x = document.getElementById('myForm');
+    // x.addEventListener('focusin', myFocus);
+    // x.addEventListener('focusout', myBlur);
+    // // x.addEventListener('focus', myFocus, true);
+    // // x.addEventListener('blur', myBlur, true);
+    //
+    // function myFocus() {
+    //     document.getElementById('myInput').style.backgroundColor = 'red';
+    // }
+    // function myBlur() {
+    //     document.getElementById('myInput').style.backgroundColor = 'blue';
+    // }
+    // function myFocus() {
+    //     document.getElementById('fname').style.backgroundColor = 'yellow';
+    // }
+    // function myBlur() {
+    //     document.getElementById('fname').style.backgroundColor = 'black';
+    // }
+    // document.getElementById('fname').addEventListener('focus', myFunction);
+    // function myFunction(){
+    //     document.getElementById('fname').style.backgroundColor = 'green';
+    // }
+    // document.getElementById('fname').onfocus = function () {myFunction()
+    //
+    // }
+    // function myFunction() {
+    //     document.getElementById('fname').style.backgroundColor = 'blue'
+    // }
+    // function myFunction(x) {
+    //     x.style.backgroundColor = 'red';
+    // }
+    // document.getElementById('myImage').addEventListener('error', myFunction);
+    // function myFunction() {
+    //     document.getElementById('demo').innerHTML = 'Error'
+    // }
+//     document.getElementById('myImage').onerror = function () {
+// myFunction()
+//     }
+//     function myFunction() {
+//         document.getElementById('demo').innerHTML = 'The image could not be loaded'
+//     }
+    // function myFunction() {
+    //     document.getElementById('demo').innerHTML = "The Image could not be loaded"
+    //     // alert('The Image is not loaded');
+    // }
+    // document.getElementById('dbclick').addEventListener('dblclick', myFunction)
+    // function myFunction() {
+    //     document.getElementById('demo').innerHTML += "I am also double click"
+    // }
+    // document.getElementById('dbclick').ondblclick = function () {myFunction()}
+    // function myFunction () {
+    //     document.getElementById('demo').innerHTML += "I am Double Click"
+    // }
+    // function  myFunction() {
+    //     document.getElementById('demo').innerHTML += 'I am Double Click';
+    //
+    // }
+    // function myFunction() {
+    //     document.getElementById('demo').innerHTML = 'You copied text!'
+    // }
+    // document.getElementById('myContext').oncontextmenu = function() {myFunction()}
+    // const myContext = document.getElementById('myContext');
+    // myContext.addEventListener('contextmenu', (e) => {e.preventDefault()});
+    //
+    // function myFunction(){
+    //     const div = document.getElementById('myDiv');
+    //     div.style.visibility = 'visible';
+    // }
+
+
+   // const myContext =  document.getElementById('myContext');
+   //  myContext.addEventListener('contextmenu', (e) =>{e.preventDefault()});
+   //  function myFunction(){
+   //      const div = document.getElementById('myDiv');
+   //      div.style.visibility = 'visible';
+   //  }
+
+    // function myFunction(){
+    //     var x = document.getElementById('mySelect').value;
+    //     document.getElementById('demo').innerHTML = "You Selected" + x;
+    // }
+    // let x = document.getElementById('myForm');
+    // x.addEventListener('focusin', focusIn);
+    // x.addEventListener('focusout', focusOut);
+    // function focusIn()
+    // {
+    //     document.getElementById('myInput').style.backgroundColor = 'red';
+    // }
+    // function focusOut()
+    // {
+    //     document.getElementById('myInput').style.backgroundColor = 'green';
+    // }
+
+
+   // let x =  document.getElementById('myForm');
+   // x.addEventListener('focus', myFocusFunction, true);
+   // x.addEventListener('blur', myBlurFunction, true);
+   // function myFocusFunction(){
+   //     document.getElementById('myInput').style.backgroundColor = 'red';
+   // }
+   // function myBlurFunction(){
+   //     document.getElementById('myInput').style.backgroundColor = 'blue';
+   // }
+    // function focusFunction()
+    // {
+    //     document.getElementById('myInput').style.backgroundColor = 'blue';
+    // }
+    // function blurFunction()
+    // {
+    //     document.getElementById('myInput').style.backgroundColor = 'red';
+    // }
+
+
+    // var onBlur = document.getElementById('fname').addEventListener("blur", myFunction);
+    // onBlur.style.backgroundColor = red;
+    // function myFunction()
+    // {
+    //     onBlur.style.backgroundColor = 'red'
+    // }
+        // document.getElementById('fname').addEventListener("blur", myFunction);
+    // function myFunction()
+    // {
+    //     alert('Uses Add event Listener');
+    // }
+    // document.getElementById('fname').onblur = function () {
+    //     myFunction()
+    // }
+    // function  myFunction(){
+    //     alert('Another Program is running')
+    // }
+    // var input = document.getElementById('fname');
+    // input.onblur = function(){
+    //     myFunction()
+    // }
+    // function myFunction()
+    // {
+    //     alert('Also its working');
+    // }
+    // function myFunction() {
+    //    alert('Wow its working');
+    // }
+        // function myFunction() {
+    //    let x = document.getElementById("fname");
+    //    x.value = x.value.toUpperCase();
+    // }
+    // const div2 = document.getElementById('myDiv');
+    // function myFunction(){
+    //     div2.style.animation = "myAnimation 2s 2"
+    // }
+    // div2.addEventListener("animationstart", myStartFunction);
+    // div2.addEventListener('animationiteration', myRepeatFunction);
+    // div2.addEventListener('animationend', myEndFuction);
+    //
+    // function myStartFunction()
+    // {
+    //     this.innerHTML = "The Animation has Started";
+    //     this.style.backgroundColor = 'pink';
+    // }
+    // function myRepeatFunction()
+    // {
+    //     this.innerHTML = "The animation was started again";
+    //     this.style.backgroundColor = 'lightblue';
+    //
+    // }
+    // function myEndFuction()
+    // {
+    //     this.innerHTML = "The animation has completed";
+    //     this.style.backgroundColor = 'green';
+    // }
+    //
+    // object.onabort = function () {
+    // myScript
+    // };
+    // object.addEventListener('abort', myScript);
+    // var btn = document.getElementById('btn');
+    // btn.onmouseover = function () {
+    //
+    // document.write('Rony');
+    // alert('Rony');
+    // }
+    // console.log(btn);
+    // var div1 = document.createElement('div1');
+    // div1.onmouseleave = function () {
+    //     document.write('Rony Div 1');
+    //     alert('Yes its working');
+    // }
+    // var students = [
+    //     {name:"rony", email:"rony@gmail.com", mobile:"01919222289"},
+    //     {name:"rony1", email:"rony1@gmail.com", mobile:"0191332289"},
+    //     {name:"rony2", email:"rony2@gmail.com", mobile:"01919442289"},
+    //     {name:"rony3", email:"rony3@gmail.com", mobile:"01919255289"},
+    // ]
+    // var key;
+    // for(key in students)
+    // {
+    //     document.write(students[key].name + ', ' + students[key].email +', '+students[key].mobile + '<br/>')
+    //
+    // }
+
+// let name = 'rony';
+// document.write(name.length)
+    // window.alert('Hi');
+</script>
+</body>
+</html>

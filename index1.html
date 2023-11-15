@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<body>
+<form action="test.html" id="regForm" method="post">
+    <label for=""><input type="radio" >Show Hide</label>
+    <table>
+        <tr>
+            <th>Name:</th>
+            <td><input type="text" id="name">     <span id="nameError" style="color:red"></span></td>
+
+        </tr>
+        <tr>
+            <th>Email:</th>
+            <td><input type="email" id="email"><span id="emailError" style="color:red"></span></td>
+        </tr>
+        <tr>
+            <th>Password:</th>
+            <td>
+                <input type="password" id="password">
+                <label for=""><input type="checkbox" id="showHide">Show Hide</label>
+                <span id="passwordError" style="color:red"></span>
+            </td>
+        </tr>
+        <tr>
+            <th>Mobile:</th>
+            <td><input type="number" id="mobile"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input type="submit" id="submitBtn" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+
+<script src="jquery-3.7.1.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
